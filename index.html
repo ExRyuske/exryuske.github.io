@@ -5,9 +5,54 @@
     <meta name="description" content="ExRyuske" />
     <meta name="viewport" content="width=device-width" />
     <title>ExRyuske</title>
+    <link rel="icon" href="favicon.ico" />
     <link href="style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" />
 </head>
 <body>
-</body>
+    <div class="me">
+        <img src="src\logo.svg" alt="logo" class="logo" />
+        <h1>ExRyuske</h1>
+        <nav>
+            <a href="https://github.com/exryuske">
+                <img src="src\github.svg" alt="GitHub" height="32" />
+            </a>
+        </nav>
+    </div>
+    <div id="dualsense_in_rdr2" class="frame">
+        <div class="title">
+            <img src="src\playstation.svg" alt="ico" class="ico" />
+            <a class="name" href="#dualsense_in_rdr2">DualSense in RDR2</a>
+            <a class="btn" href="https://mega.nz/folder/xT9E0Cia#aBk6yQd8EpWNHZvxyHHo3Q">Download</a>
+        </div>
+        <p>
+            1. Install <a href="https://store.steampowered.com/app/1812620/DSX/"><code>DSX</code></a> <br>
+            2. Download <a href="http://www.dev-c.com/rdr2/scripthookrdr2/"><code>Script Hook RDR2</code></a> <br>
+            ㅤCopy ".dll" fles to RDR2 dir <br>
+            3. Download <a href="https://github.com/Halen84/ScriptHookRDR2DotNet-V2/releases"><code>Script Hook RDR2 .NET</code></a> and its <a href="https://github.com/Halen84/ScriptHookRDR2DotNet-V2#requirements"><code>requirements</code></a> <br>
+            ㅤCopy files to RDR2 dir <br>
+            4. Download <a href="https://github.com/Killface1980/DualSense4Rockstar/blob/master/__RELEASE/RDR2/DSX4RDR2.zip"><code>DSX4RDR2</code></a> <br>
+            ㅤCreate "Scripts" in RDR2 dir <br>
+            ㅤCopy ".dll" files to created folder <br>
+            5. Download <a href="https://www.rdr2mods.com/downloads/rdr2/tools/76-lennys-mod-loader-rdr/"><code>Lenny's Mod Loader</code></a> <br>
+            ㅤCopy files from "ModLoader" folder into RDR2 dir <br>
+            6. Download <a href="https://www.nexusmods.com/reddeadredemption2/mods/660"><code>PlayStation Icons Replacement</code></a> <br>
+            ㅤExtract folder to "lml" folder in RDR2 dir <br>
+            7. Start "DSX" and set emulation to "Xbox360"
+        </p>
+    </div>
+    <div id="games_on_another_drive" class="frame">
+        <div class="title">
+            <img src="src\linux.svg" alt="ico" class="ico" />
+            <a class="name" href="#games_on_another_drive">Games on Another Drive</a>
+        </div>
+        <p>
+            1. Create a directory and grant access to it <br>
+            ㅤ<code>sudo mkdir /games</code> <br>
+            ㅤ<code>sudo chmod -R 777 /games</code> <br>
+            2. Add to /etc/fstab <br>
+            ㅤ<code>UUID="disk uuid" /games ext4 defaults 0 0</code> <br>
+            3. Restart PC
+        </p>
+    </div>
 </html>
