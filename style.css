@@ -4,7 +4,6 @@
     font-family: Comfortaa;
     margin: auto;
     max-width: 512px;
-    padding: 2px;
     text-decoration: none;
 }
 
@@ -14,52 +13,53 @@
 
 .logo {
     height: 256px;
-    margin-bottom: -32px;
-    margin-top: -16px;
+    margin-bottom: -36px;
+    margin-top: -6px;
+}
+
+.link {
+    height: 32px;
+    margin: 6px;
 }
 
 .frame {
-    border-radius: 10px;
-    border: 2px solid;
-    margin-bottom: 8px;
-    margin-top: 8px;
-    padding: 2px 5px 2px 5px;
+    border-radius: 9px;
+    border: 3px solid #212121;
+    margin: 3px;
+    margin-bottom: 12px;
+    padding-left: 6px;
 }
 
 .title {
     background-color: #212121;
-    border: 2px solid #212121;
-    border-radius: 8px;
     display: flex;
-    margin: -2px -5px 6px -5px;
+    margin: 0 0 0 -6px;
+    padding: 0px 0 3px 0;
 }
 
-.ico {
+.txt {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.img {
     background-color: #212121;
-    height: 25px;
+    height: 24px;
+    margin-left: 6px;
+    margin-right: 3px;
 }
 
 .name {
     background-color: #212121;
-    font-size: 22.6px;
+    font-size: 21.6px;
     flex-grow: 1;
 }
 
-.btn {
-    border: 2px solid;
-    border-radius: 10px;
-    font-size: larger;
-    padding: 2px 5px 2px 5px;
-    background-color: #212121;
-}
-
 p {
-    line-height: 1.5;
+    line-height: 22px;
 }
 
 code {
-    background-color: #212121;
-    border: 0px solid;
-    border-radius: 5px;
     color: #bbbb11;
+    user-select: all; 
 }
