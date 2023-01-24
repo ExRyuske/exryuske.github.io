@@ -3,7 +3,7 @@
     color: #f9f9f9;
     font-family: Comfortaa;
     margin: auto;
-    max-width: 512px;
+    max-width: 483px;
     text-decoration: none;
 }
 
@@ -36,10 +36,6 @@
     padding: 0 0 3px 0;
 }
 
-.txt {
-    padding: 3px 0 3px 0;
-}
-
 .img {
     background-color: #212121;
     height: 24px;
@@ -52,11 +48,17 @@
     flex-grow: 1;
 }
 
+details > summary {
+    cursor: pointer;
+    padding: 3px 0 3px 0;
+    margin: 3px 0 3px 0;
+}
+
 p {
     line-height: 22px;
 }
 
 code {
     color: #FFA500;
-    user-select: all; 
+    user-select: all;
 }

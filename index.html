@@ -30,36 +30,57 @@
                 <img alt="Download" class="img" src="src\download.svg"/>
             </a>
         </div>
-        <p class="txt">
-            1. Install <a href="https://store.steampowered.com/app/1812620/DSX/"><code>DSX</code></a> <br>
-            2. Download <a href="http://www.dev-c.com/rdr2/scripthookrdr2/"><code>Script Hook RDR2</code></a> <br>
-            ㅤCopy ".dll" files to RDR2 dir <br>
-            3. Download <a href="https://github.com/Halen84/ScriptHookRDR2DotNet-V2/releases"><code>Script Hook RDR2 .NET</code></a> and its <a href="https://github.com/Halen84/ScriptHookRDR2DotNet-V2#requirements"><code>requirements</code></a> <br>
-            ㅤCopy files to RDR2 dir <br>
-            4. Download <a
-                href="https://github.com/Killface1980/DualSense4Rockstar/blob/master/__RELEASE/RDR2/DSX4RDR2.zip"><code>DSX4RDR2</code></a> <br>
-            ㅤCreate "Scripts" in RDR2 dir <br>
-            ㅤCopy ".dll" files to created folder <br>
-            5. Download <a href="https://www.rdr2mods.com/downloads/rdr2/tools/76-lennys-mod-loader-rdr/"><code>Lenny's Mod Loader</code></a> <br>
-            ㅤCopy files from "ModLoader" folder into RDR2 dir <br>
-            6. Download <a href="https://www.nexusmods.com/reddeadredemption2/mods/660"><code>PlayStation Icons Replacement</code></a> <br>
-            ㅤExtract folder to "lml" folder in RDR2 dir <br>
-            7. Start "DSX" and set emulation to "Xbox360"
-        </p>
+        <details>
+            <summary>More...</summary>
+            <p>
+                1. Install <a href="https://store.steampowered.com/app/1812620/DSX/"><code>DSX</code></a> <br>
+                2. Download and unzip to the directory with RDR2 <br>
+                3. Start "DSX" and set emulation to "Xbox360"
+            </p>
+        </details>
     </div>
     <div class="frame" id="games_on_another_drive">
         <div class="title">
             <img alt="ico" class="img" src="src\linux.svg"/>
             <a class="name" href="#games_on_another_drive">Games on Another Drive</a>
         </div>
-        <p class="txt">
-            1. Create a directory and grant access to it <br>
-            ㅤ<code>sudo mkdir /games</code> <br>
-            ㅤ<code>sudo chmod -R 777 /games</code> <br>
-            2. Add to /etc/fstab <br>
-            ㅤ<code>UUID="disk uuid" /games ext4 defaults 0 0</code> <br>
-            3. Restart PC
-        </p>
+        <details>
+            <summary>More...</summary>
+            <p>
+                1. Create a directory: <code>sudo mkdir /games</code> <br>
+                2. Grant access to directory: <code>sudo chmod -R 777 /games</code> <br>
+                3. Add to /etc/fstab: <code>UUID="foo" /games ext4 defaults 0 0</code> <br>
+                4. Reboot PC
+            </p>
+        </details>
+    </div>
+    <div class="frame" id="tissot_install_custom_rom">
+        <div class="title">
+            <img alt="ico" class="img" src="src\android.svg"/>
+            <a class="name" href="#tissot_install_custom_rom">Tissot install custom ROM</a>
+            <a class="img" href="#">
+                <img alt="Download" class="img" src="src\download.svg"/>
+            </a>
+        </div>
+        <details>
+            <summary>More...</summary>
+            <p>
+                1. Download any ROM and the files in the title<br>
+                2. Enable OEM Unlock and USB Debugging <br>
+                3. Unzip boot-recovery.img to the ADB RUN bin folder <br>
+                4. Open ADB RUB and enter <code>A</code> <br>
+                5. Enter <code>adb reboot bootloader</code> <br>
+                6. Enter <code>fastboot oem unlock</code> <br>
+                7. After rebooting, repeat 2, 5 <br>
+                8. Enter <code>fastboot flash boot boot-recovery.img</code> <br>
+                9. Enter <code>fastboot reboot</code> <br>
+                10. Wipe dalvik, system, data <br>
+                11. Copy ROM and Magisk to device <br>
+                12. Install ROM in the active slot and inject TWRP <br>
+                13. Reboot to recovery and install Magisk <br>
+                14. Reboot into system
+            </p>
+        </details>
     </div>
 </body>
 </html>
