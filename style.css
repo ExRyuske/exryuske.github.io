@@ -23,6 +23,7 @@ body {
 .link {
     height: 32px;
     margin: 6px 1px 0 1px;
+    width: 32px;
 }
 
 .frame {
@@ -37,7 +38,7 @@ body {
     padding: 0 3px 3px 3px;
 }
 
-.img {
+.ico {
     height: 24px;
     width: 24px;
 }
@@ -59,5 +60,6 @@ summary {
 
 code {
     color: #FFA500;
+    overflow-wrap: break-word;
     user-select: all;
 }
