@@ -56,10 +56,20 @@ details {
 
 summary {
     cursor: pointer;
+    user-select: none;
+}
+
+details > p {
+    margin: 3px 0 0 0;
 }
 
 code {
     color: #FFA500;
-    overflow-wrap: break-word;
     user-select: all;
+    word-break: break-all;
+}
+
+hr {
+    border-color: #000000;
+    border-width: 6px;
 }
