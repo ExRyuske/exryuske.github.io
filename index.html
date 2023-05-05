@@ -28,9 +28,9 @@
         <details>
             <summary>Show more...</summary>
             <p>
-                CPU: <code>AMD Ryzen 7 2700</code> (3.60 GHz) <br>
+                CPU: <code>AMD Ryzen 7 2700</code> (3.70 GHz) <br>
                 GPU: <code>Sapphire PULSE RX 5700 XT</code> <br>
-                RAM: <code>Crucial 8GBx2</code> (2667 MHz) <br>
+                RAM: <code>Crucial 8GBx2</code> (2993 MHz) <br>
                 <hr noshade>
                 SSD: <code>DEXP NVME 256 GB</code> (system) <br>
                 SSD: <code>KingDian 512 GB</code> (games) <br>
@@ -42,7 +42,6 @@
                 <hr noshade>
                 Monitor: <code>MUCAI N2912</code> <br>
                 Monitor: <code>HP 22y</code> <br>
-                Monitor: <code>BenQ G900W</code> <br>
                 <hr noshade>
                 Hamster: <code>Logitech G304</code> <br>
                 Keyboard: <code>MIIIW MWXKT01</code> <br>
@@ -50,14 +49,15 @@
                 <hr noshade>
                 Sound Card: <code>XTUGA E22</code> <br>
                 Microphone: <code>Chinish BM 800</code> <br>
+                Sound Card: <code>foo</code> <br>
                 Headset: <code>Apple EarPods 3.5mm</code>
             </p>
         </details>
     </div>
-    <div class="frame" id="game-configs">
+    <div class="frame" id="configuration">
         <div class="title">
             <img alt="ico" class="ico" src="src/gear.svg">
-            <a class="name" href="#game-configs">Game configs</a>
+            <a class="name" href="#configuration">Configuration</a>
         </div>
         <details>
             <summary class>Show more...</summary>
@@ -108,7 +108,10 @@
         <details>
             <summary>Show more...</summary>
             <p>
-                Just <a href="https://mega.nz/folder/gHV1zZTD#fvY_Sek0osaHhL7gqXtbuQ" target="_blank"><code>Download</code></a> & run .reg file
+                1. Press Win + R <br>
+                2. Enter <code>regedit</code> <br>
+                3. Go <code>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</code> <br>
+                4. Change 0 to 1 in the EnableLUA
             </p>
         </details>
     </div>
@@ -134,6 +137,21 @@
                 12. Install ROM in the active slot and inject TWRP <br>
                 13. Reboot to recovery and install Magisk <br>
                 14. Reboot into system
+            </p>
+        </details>
+    </div>
+    <div class="frame" id="xbox-stuck-on-syncing-data">
+        <div class="title">
+            <img alt="ico" class="ico" src="src\sync.svg"/>
+            <a class="name" href="#xbox-stuck-on-syncing-data">Xbox stuck on syncing data</a>
+        </div>
+        <details>
+            <summary>Show more...</summary>
+            <p>
+                1. Open <code>Task Manager</code> <br>
+                2. Find <code>Gaming Services</code> <br>
+                3. End this task <br>
+                4. Restart the game
             </p>
         </details>
     </div>  
