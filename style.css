@@ -22,6 +22,7 @@ body {
     height: 256px;
     margin-bottom: -36px;
     margin-top: -6px;
+    width: auto;
 }
 
 .link {
