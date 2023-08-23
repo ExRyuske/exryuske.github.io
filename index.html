@@ -6,138 +6,207 @@
     <meta content="width=device-width" name="viewport"/>
     <title>ExRyuske</title>
     <link href="src\logo.svg" rel="icon"/>
-    <link href="style.css" rel="stylesheet"/>
+    <link href="style copy.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet"/>
 </head>
 <body>
     <div class="me">
-        <img alt="logo" class="logo" src="src\logo.svg"/>
+        <img alt="logo" class="logo" src="src\logo.svg" loading="lazy"/>
         <h1>ExRyuske</h1>
         <a href="https://github.com/exryuske">
-            <img alt="GitHub" class="link" src="src\github.svg"/>
+            <img alt="GitHub" class="link" src="src\github.svg" loading="lazy"/>
         </a>
         <a href="https://www.youtube.com/@exryuske">
-            <img alt="YouTube" class="link" src="src\youtube.svg"/>
+            <img alt="YouTube" class="link" src="src\youtube.svg" loading="lazy"/>
         </a>
-    </div>
-    <div class="frame" id="my-setup">
-        <div class="title">
-            <img alt="ico" class="ico" src="src/computer.svg">
-            <a class="name" href="#my-setup">My setup</a>
+        <div>
+            <br>
+            <button onclick="show_about_me()" name="tabs">About Me</button>
+            <button onclick="show_tools()" name="tabs">Tools</button>
+            <button onclick="show_fix_issues()" name="tabs">Fix Issues</button>
         </div>
-        <details>
-            <summary>Show more...</summary>
-            <p>
-                CPU: <code>AMD Ryzen 5 5500</code> <br>
-                GPU: <code>Sapphire PULSE RX 5700 XT</code> <br>
-                RAM: <code>Crucial 8GBx2</code> <br>
-                <hr noshade>
-                SSD: <code>DEXP NVME 256 GB</code> (system) <br>
-                SSD: <code>KingDian 512 GB</code> (games) <br>
-                SSD: <code>Apacer 128 GB</code> (media) <br>
-                <hr noshade>
-                MB: <code>MSI B450M-A PRO MAX</code> <br>
-                PSU: <code>Cooler Master MWE 550</code> <br>
-                Cooler: <code>DEEPCOOL GAMMAXX 300</code> <br>
-                <hr noshade>
-                Monitor: <code>MUCAI N2912</code> <br>
-                Monitor: <code>HP 22y</code> <br>
-                <hr noshade>
-                Hamster: <code>Logitech G304</code> <br>
-                Keyboard: <code>HyperX Alloy Origins 60</code> <br>
-                Gamepad: <code>Sony DualSense</code> <br>
-                <hr noshade>
-                Sound Card: <code>GoXLR MINI</code> <br>
-                Microphone: <code>NW 800</code> <br>
-                Headset: <code>Apple EarPods 3.5mm</code>
-            </p>
-        </details>
     </div>
-    <hr noshade>
-    <div class="frame" id="dualsense-in-rdr2">
-        <div class="title">
-            <img alt="ico" class="ico" src="src\playstation.svg"/>
-            <a class="name" href="#dualsense-in-rdr2">DualSense in RDR2</a>
+    <div id="About_me">
+        <div class="frame" id="my_setup">
+            <div class="title">
+                <img alt="ico" class="ico" src="src/computer.svg" loading="lazy"/>
+                <a class="name" href="#my_setup">My setup</a>
+            </div>
+            <div class="inframe">
+                <p>
+                    CPU: <code>AMD Ryzen 5 5500</code> <br>
+                    GPU: <code>Sapphire PULSE RX 5700 XT</code> <br>
+                    RAM: <code>Crucial 8GBx2</code> <br>
+                    <br>
+                    SSD: <code>DEXP NVME 256 GB</code> (system) <br>
+                    SSD: <code>KingDian 512 GB</code> (games) <br>
+                    SSD: <code>Apacer 128 GB</code> (media) <br>
+                    <br>
+                    MB: <code>MSI B450M-A PRO MAX</code> <br>
+                    PSU: <code>Cooler Master MWE 550</code> <br>
+                    Cooler: <code>DEEPCOOL GAMMAXX 300</code> <br>
+                    <br>
+                    Monitor: <code>MUCAI N2912</code> <br>
+                    Monitor: <code>HP 22y</code> <br>
+                    <br>
+                    Hamster: <code>Endgame Gear XM1r</code> <br>
+                    Keyboard: <code>HyperX Alloy Origins 60</code> <br>
+                    Gamepad: <code>Sony DualSense</code> <br>
+                    <br>
+                    Sound Card: <code>GoXLR MINI</code> <br>
+                    Microphone: <code>NW 800</code> <br>
+                    Headphones: <code>HyperX Cloud Alpha</code>
+                </p>
+            </div>
         </div>
-        <details>
-            <summary>Show more...</summary>
-            <p>
-                1. Install <a href="https://store.steampowered.com/app/1812620/DSX/" target="_blank"><code>DSX</code></a> <br>
-                2. <a href="https://mega.nz/folder/xT9E0Cia#aBk6yQd8EpWNHZvxyHHo3Q" target="_blank"><code>Download</code></a> & unzip to RDR2 directory <br>
-                3. Start DSX, set emulation to "Xbox360"
-            </p>
-        </details>
     </div>
-    <div class="frame" id="games-on-another-drive">
-        <div class="title">
-            <img alt="ico" class="ico" src="src\linux.svg"/>
-            <a class="name" href="#games-on-another-drive">Games on another drive</a>
+    <div id="Tools" class="hidden_by_default">
+        <div class="frame" id="#download_speed_calculator">
+            <div class="title">
+                <img alt="ico" class="ico" src="src/download.svg" loading="lazy"/>
+                <a class="name" href="#download_speed_calculator">Download speed calculator</a>
+            </div>
+            <div class="inframe">
+                <p>
+                    Size in GB <br>
+                    <input type="number" id="Size" name="calculator" /> <br>
+                    <br>
+                    Speed in MB/s <br>
+                    <input type="number" id="Speed" name="calculator" /> <br>
+                    <br>
+                    <button type="button" onclick="calculate()" name="calculator">Calculate</button> <br>
+                    <br>
+                    Result: <code id="Result" name="calculator">0</code>
+                </p>
+            </div>
         </div>
-        <details>
-            <summary>Show more...</summary>
-            <p>
-                1. Create a directory: <code>sudo mkdir /games</code> <br>
-                2. Grant access to directory: <code>sudo chmod -R 777 /games</code> <br>
-                3. Add to /etc/fstab: <code>UUID="foo" /games ext4 defaults 0 0</code> <br>
-                4. Reboot PC
-            </p>
-        </details>
     </div>
-    <div class="frame" id="lock-cursor-in-xbox-games">
-        <div class="title">
-            <img alt="ico" class="ico" src="src\pointer.svg"/>
-            <a class="name" href="#lock-cursor-in-xbox-games">Lock cursor in Xbox games</a>
+    <div id="Optimization" class="hidden_by_default">
+        <div class="frame" id="hunt_showdown">
+            <div class="title">
+                <img alt="ico" class="ico" src="src/hunt-showdown.jpg" loading="lazy"/>
+                <a class="name" href="#hunt_showdown">Hunt: Showdown</a>
+            </div>
+            <div class="inframe">
+                <p>
+                    foo
+                </p>
+            </div>
         </div>
-        <details>
-            <summary>Show more...</summary>
-            <p>
-                1. Press Win + R <br>
-                2. Enter <code>regedit</code> <br>
-                3. Go <code>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</code> <br>
-                4. Change 0 to 1 in the EnableLUA
-            </p>
-        </details>
+        <div class="frame" id="windows_11">
+            <div class="title">
+                <img alt="ico" class="ico" src="src/windows.iso" loading="lazy"/>
+                <a class="name" href="#windows_11">Windows 11</a>
+            </div>
+            <div class="inframe">
+                <p>
+                    1. Settings > System > Display > Graphics > Default graphics settings > Enable Optimization for windowed games <br>
+                    2. Settings > Bluetooth & devices > Mouse > Additional mouse settings > Pointer Options > Disable Enchance pointer precision <br> 
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="frame" id="tissot-install-custom-rom">
-        <div class="title">
-            <img alt="ico" class="ico" src="src\android.svg"/>
-            <a class="name" href="#tissot-install-custom-rom">Tissot install custom ROM</a>
+    <div id="Fix_issues" class="hidden_by_default">
+        <div class="frame" id="dualsense_in_rdr2">
+            <div class="title">
+                <img alt="ico" class="ico" src="src\playstation.svg" loading="lazy"/>
+                <a class="name" href="#dualsense_in_rdr2">DualSense in RDR2</a>
+            </div>
+            <div class="inframe">
+                <p>
+                    1. Install <a href="https://store.steampowered.com/app/1812620/DSX/" target="_blank"><code>DSX</code></a> <br>
+                    2. Download <a href="https://mega.nz/folder/xT9E0Cia#aBk6yQd8EpWNHZvxyHHo3Q" target="_blank"><code>archive</code></a> <br>
+                    3. Unzip 002.zip to RDR2 directory <br>
+                    3. Start DSX, set emulation to "Xbox360"
+                </p>
+            </div> 
         </div>
-        <details>
-            <summary>Show more...</summary>
-            <p>
-                1. Download ROM & <a href="https://mega.nz/folder/xH9U2YgD#LUwLml3pmrQIW_3IITCvdw" target="_blank"><code>this files</code></a> <br>
-                2. Enable OEM Unlock and USB Debugging <br>
-                3. Unzip boot-recovery.img to the ADB RUN bin folder <br>
-                4. Open ADB RUB and enter <code>A</code> <br>
-                5. Enter <code>adb reboot bootloader</code> <br>
-                6. Enter <code>fastboot oem unlock</code> <br>
-                7. After rebooting, repeat 2, 5 <br>
-                8. Enter <code>fastboot flash boot boot-recovery.img</code> <br>
-                9. Enter <code>fastboot reboot</code> <br>
-                10. Wipe dalvik, system, data <br>
-                11. Copy ROM and Magisk to device <br>
-                12. Install ROM in the active slot and inject TWRP <br>
-                13. Reboot to recovery and install Magisk <br>
-                14. Reboot into system
-            </p>
-        </details>
+        <div class="frame" id="games_on_another_drive">
+            <div class="title">
+                <img alt="ico" class="ico" src="src\linux.svg" loading="lazy"/>
+                <a class="name" href="#games_on_another_drive">Games on another drive</a>
+            </div>
+            <div class="inframe">
+                <p>
+                    1. Create a directory <code>sudo mkdir /games</code> <br>
+                    2. Grant access to directory <code>sudo chmod -R 777 /games</code> <br>
+                    3. Add to /etc/fstab <code>UUID="foo" /games ext4 defaults 0 0</code> <br>
+                    4. Reboot PC
+                </p>
+            </div>
+        </div>
+        <div class="frame" id="lock_cursor_in_xbox_games">
+            <div class="title">
+                <img alt="ico" class="ico" src="src\pointer.svg" loading="lazy"/>
+                <a class="name" href="#lock_cursor_in_xbox_games">Lock cursor in Xbox games</a>
+            </div>
+            <div class="inframe">
+                <p>
+                    1. Press Win + R <br>
+                    2. Enter <code>regedit</code> <br>
+                    3. Go <code>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</code> <br>
+                    4. Change 0 to 1 in the EnableLUA
+                </p>
+            </div>
+        </div>
+        <div class="frame" id="tissot_install_custom_rom">
+            <div class="title">
+                <img alt="ico" class="ico" src="src\android.svg" loading="lazy"/>
+                <a class="name" href="#tissot_install_custom_rom">Tissot install custom ROM</a>
+            </div>
+            <div class="inframe">
+                <p>
+                    1. Download ROM and <a href="https://mega.nz/folder/xH9U2YgD#LUwLml3pmrQIW_3IITCvdw" target="_blank"><code>this files</code></a> <br>
+                    2. Enable OEM Unlock and USB Debugging <br>
+                    3. Unzip boot-recovery.img to the ADB RUN bin folder <br>
+                    4. Open ADB RUB and enter "A" <br>
+                    5. Enter <code>adb reboot bootloader</code> <br>
+                    6. Enter <code>fastboot oem unlock</code> <br>
+                    7. After rebooting, repeat steps 2 and 5 <br>
+                    8. Enter <code>fastboot flash boot boot-recovery.img</code> <br>
+                    9. Enter <code>fastboot reboot</code> <br>
+                    10. Wipe dalvik, system, data <br>
+                    11. Copy ROM and Magisk to device <br>
+                    12. Install ROM in the active slot and inject TWRP <br>
+                    13. Reboot to recovery and install Magisk <br>
+                    14. Reboot into system
+                </p>
+            </div>
+        </div>
+        <div class="frame" id="vac_was_unable_to_verify_ur_game_session">
+            <div class="title">
+                <img alt="ico" class="ico" src="src\steam.svg" loading="lazy"/>
+                <a class="name" href="#vac_was_unable_to_verify_ur_game_session">VAC was unable to verify ur game session</a>
+            </div>
+            <div class="inframe">
+                <p>
+                    1. Check the system date and time <br>
+                    2. Close the steam <br>
+                    3. Go to the steam folder <code>C:\Program Files (x86)\Steam</code> <br>
+                    4. Delete <code>Steam.dll</code> and <code>SteamUI.dll</code> <br>
+                    5. Press Win + R <br>
+                    6. Enter <code>C:\Program Files (x86)\Steam\bin\SteamService.exe /repair</code> <br>
+                    7. Open Steam <br>
+                    8. Open the steam download settings and clear the cache <br>
+                    9. Check the integrity of the Counter-Strike files <br>
+                </p>
+            </div>
+        </div>  
+        <div class="frame" id="xbox_app_stuck_on_syncing_data">
+            <div class="title">
+                <img alt="ico" class="ico" src="src\sync.svg" loading="lazy"/>
+                <a class="name" href="#xbox_app_stuck_on_syncing_data">Xbox app stuck on syncing data</a>
+            </div>
+            <div class="inframe">
+                <p>
+                    1. Open Task Manager <br>
+                    2. Find <code>Gaming Services</code> <br>
+                    3. End this task <br>
+                    4. Restart the game
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="frame" id="xbox-stuck-on-syncing-data">
-        <div class="title">
-            <img alt="ico" class="ico" src="src\sync.svg"/>
-            <a class="name" href="#xbox-stuck-on-syncing-data">Xbox stuck on syncing data</a>
-        </div>
-        <details>
-            <summary>Show more...</summary>
-            <p>
-                1. Open <code>Task Manager</code> <br>
-                2. Find <code>Gaming Services</code> <br>
-                3. End this task <br>
-                4. Restart the game
-            </p>
-        </details>
-    </div>  
     <script src="main.js"></script>
 </body>
 </html>
