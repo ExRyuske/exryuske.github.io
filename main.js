@@ -1,19 +1,19 @@
-function show_about_me() {
-    document.getElementById('About_me').style.display ='block';
-    document.getElementById('Tools').style.display ='none';
-    document.getElementById('Fix_issues').style.display ='none';
+function show_my_setup() {
+    document.getElementById('my_setup').style.display ='block';
+    document.getElementById('tools').style.display ='none';
+    document.getElementById('fix_issues').style.display ='none';
 }
 
 function show_tools() {
-    document.getElementById('About_me').style.display ='none';
-    document.getElementById('Tools').style.display ='block';
-    document.getElementById('Fix_issues').style.display ='none';
+    document.getElementById('my_setup').style.display ='none';
+    document.getElementById('tools').style.display ='block';
+    document.getElementById('fix_issues').style.display ='none';
 }
 
 function show_fix_issues() {
-    document.getElementById('About_me').style.display ='none';
-    document.getElementById('Tools').style.display ='none';
-    document.getElementById('Fix_issues').style.display ='block';
+    document.getElementById('my_setup').style.display ='none';
+    document.getElementById('tools').style.display ='none';
+    document.getElementById('fix_issues').style.display ='block';
 }
 
 function calculate() {
@@ -22,9 +22,9 @@ function calculate() {
 
     var result = document.getElementById("Result");
 
-    var seconds = (8192 / (speed * 1024) * (size * 1024) * 1.05)
-    var hours = (Math.round(seconds / 3600) + " Hours");
-    var minutes = (Math.round(seconds / 60 % 60) + " Minutes");
+    var seconds = (8192 / (speed * 1024) * (size * 1024))
+    var hours = (Math.floor(seconds / 3600) + " Hours");
+    var minutes = (Math.floor(seconds / 60 % 60) + " Minutes");
 
     result.textContent = "≈ " + hours + " " + minutes;
 }
