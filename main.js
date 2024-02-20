@@ -1,17 +1,9 @@
-function show_my_setup() {
-    document.getElementById('my_setup').style.display ='block';
-    document.getElementById('tools').style.display ='none';
-    document.getElementById('fix_issues').style.display ='none';
-}
-
 function show_tools() {
-    document.getElementById('my_setup').style.display ='none';
     document.getElementById('tools').style.display ='block';
     document.getElementById('fix_issues').style.display ='none';
 }
 
 function show_fix_issues() {
-    document.getElementById('my_setup').style.display ='none';
     document.getElementById('tools').style.display ='none';
     document.getElementById('fix_issues').style.display ='block';
 }

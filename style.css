@@ -82,7 +82,7 @@ input {
     border-radius: 6px;
 }
 
-highlight {
+code {
     color: #FFA500;
     user-select: all;
     word-break: break-all;

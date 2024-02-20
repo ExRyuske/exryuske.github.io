@@ -22,61 +22,106 @@
     </div>
     <div class="tabs">
         <br>
-        <button onclick="show_my_setup()" name="tabs">My Setup</button>
-        <button onclick="show_tools()" name="tabs">Tools</button>
         <button onclick="show_fix_issues()" name="tabs">Fix Issues</button>
+        <button onclick="show_tools()" name="tabs">Tools</button>
     </div>
-    <div id="my_setup" class="hidden_by_default">
-        <div class="frame" id="devices">
+    <div id="fix_issues">
+        <div class="frame" id="dualsense_in_rdr2">
             <div class="title">
-                <img alt="ico" class="ico" src="src/computer.svg" loading="lazy"/>
-                <a class="name" href="#devices">Devices</a>
+                <img alt="ico" class="ico" src="src\playstation.svg" loading="lazy"/>
+                <a class="name" href="#dualsense_in_rdr2">DualSense in RDR2</a>
             </div>
             <div class="inframe">
                 <p>
-                    Monitor <highlight>MUCAI N2912</highlight> <br>
-                    Monitor <highlight>HP 22y</highlight> <br>
-                    Mouse <highlight>Endgame Gear XM1r</highlight> <br>
-                    Keyboard <highlight>HyperX Alloy Origins 60</highlight> <br>
-                    Sound Card <highlight>Ugreen US206</highlight> <br>
-                    Headset <highlight>HyperX Cloud Alpha</highlight>
+                    1. Install <a href="https://store.steampowered.com/app/1812620/DSX/" target="_blank"><code>DSX</code></a> <br>
+                    2. Download the <a href="https://mega.nz/folder/xT9E0Cia#aBk6yQd8EpWNHZvxyHHo3Q" target="_blank"><code>archive</code></a> <br>
+                    3. Extract "002.zip" into your RDR2 directory <br>
+                    3. Open DSX and set the emulation to "Xbox360"
+                </p>
+            </div> 
+        </div>
+        <div class="frame" id="games_on_another_drive">
+            <div class="title">
+                <img alt="ico" class="ico" src="src\linux.svg" loading="lazy"/>
+                <a class="name" href="#games_on_another_drive">Games on another drive</a>
+            </div>
+            <div class="inframe">
+                <p>
+                    1. Create a directory <code>sudo mkdir /mnt/games</code> <br>
+                    2. Grant access to directory <code>sudo chmod -R 777 /mnt/games</code> <br>
+                    3. Add the disk to <code>/etc/fstab</code><br>
+                    4. Reboot your PC <br>
                 </p>
             </div>
         </div>
-        <div class="frame" id="gaming_pc">
+        <div class="frame" id="lock_cursor_in_xbox_games">
             <div class="title">
-                <img alt="ico" class="ico" src="src/computer.svg" loading="lazy"/>
-                <a class="name" href="#gaming_pc">Gaming PC</a>
+                <img alt="ico" class="ico" src="src\pointer.svg" loading="lazy"/>
+                <a class="name" href="#lock_cursor_in_xbox_games">Lock cursor in Xbox games</a>
             </div>
             <div class="inframe">
                 <p>
-                    OS <highlight>Windows 11 22H2</highlight> <br>
-                    <br>
-                    CPU <highlight>AMD Ryzen 5 5500</highlight> <br>
-                    MB <highlight>MSI B450M-A PRO MAX</highlight> <br>
-                    GPU <highlight>Sapphire PULSE RX 5700 XT</highlight> <br>
-                    Cooler <highlight>DEEPCOOL GAMMAXX 300</highlight> <br>
-                    RAM <highlight>Crucial 16GB (8+8) 3200 MHz</highlight> <br>
-                    SSD <highlight>DEXP NVME 256 GB</highlight> <br>
-                    SSD <highlight>KingDian 512 GB</highlight> <br>
-                    PSU <highlight>Cooler Master MWE 550</highlight>
+                    1. Press Win + R <br>
+                    2. Enter <code>regedit</code> <br>
+                    3. Navigate to <code>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</code> <br>
+                    4. Set the "EnableLUA" entry to 1.
                 </p>
             </div>
         </div>
-        <div class="frame" id="server">
+        <div class="frame" id="tissot_install_custom_rom">
             <div class="title">
-                <img alt="ico" class="ico" src="src/computer.svg" loading="lazy"/>
-                <a class="name" href="#server">Server</a>
+                <img alt="ico" class="ico" src="src\android.svg" loading="lazy"/>
+                <a class="name" href="#tissot_install_custom_rom">Tissot install custom ROM</a>
             </div>
             <div class="inframe">
                 <p>
-                    OS <highlight>Debian 12</highlight> <br>
-                    <br>
-                    CPU <highlight>AMD A6-5200</highlight> <br>
-                    MB <highlight>EasyNote TE69KB</highlight> <br>
-                    GPU <highlight>AMD Radeon HD 8400</highlight> <br>
-                    RAM <highlight>6 GB(4+2)</highlight> <br>
-                    HDD <highlight>512 GB</highlight> <br>
+                    1. Download the ROM and <a href="https://mega.nz/folder/xH9U2YgD#LUwLml3pmrQIW_3IITCvdw" target="_blank"><code>these files</code></a> <br>
+                    2. Enable OEM Unlock and USB Debugging <br>
+                    3. Unzip "boot-recovery.img" to the ADB RUN bin folder <br>
+                    4. Open ADB RUB and enter <code>A</code> <br>
+                    5. Enter <code>adb reboot bootloader</code> <br>
+                    6. Enter <code>fastboot oem unlock</code> <br>
+                    7. After rebooting, repeat steps 2 and 5 <br>
+                    8. Enter <code>fastboot flash boot boot-recovery.img</code> <br>
+                    9. Enter <code>fastboot reboot</code> <br>
+                    10. Wipe dalvik, system, data <br>
+                    11. Copy the ROM and Magisk to the device <br>
+                    12. Install the ROM in the active slot and inject TWRP <br>
+                    13. Reboot to recovery and install Magisk <br>
+                    14. Reboot into the system
+                </p>
+            </div>
+        </div>
+        <div class="frame" id="vac_was_unable_to_verify_your_game_session">
+            <div class="title">
+                <img alt="ico" class="ico" src="src\steam.svg" loading="lazy"/>
+                <a class="name" href="#vac_was_unable_to_verify_your_game_session">VAC was unable to verify your game session</a>
+            </div>
+            <div class="inframe">
+                <p>
+                    1. Verify the system date and time. <br>
+                    2. Close the steam <br>
+                    3. Navigate to the Steam folder <code>C:\Program Files (x86)\Steam</code> <br>
+                    4. Delete <code>Steam.dll</code> and <code>SteamUI.dll</code> <br>
+                    5. Press Win + R <br>
+                    6. Enter <code>C:\Program Files (x86)\Steam\bin\SteamService.exe /repair</code> <br>
+                    7. Open Steam <br>
+                    8. Open the steam download settings and clear the cache <br>
+                    9. Check the integrity of the Counter-Strike files <br>
+                </p>
+            </div>
+        </div>  
+        <div class="frame" id="xbox_app_stuck_on_syncing_data">
+            <div class="title">
+                <img alt="ico" class="ico" src="src\sync.svg" loading="lazy"/>
+                <a class="name" href="#xbox_app_stuck_on_syncing_data">Xbox app stuck on syncing data</a>
+            </div>
+            <div class="inframe">
+                <p>
+                    1. Open Task Manager <br>
+                    2. Locate <code>Gaming Services</code> <br>
+                    3. End this task <br>
+                    4. Restart the game
                 </p>
             </div>
         </div>
@@ -97,108 +142,7 @@
                     <br>
                     <button type="button" onclick="calculate()" name="calculator">Calculate</button> <br>
                     <br>
-                    Result: <highlight id="Result" name="calculator">0</highlight>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div id="fix_issues">
-        <div class="frame" id="dualsense_in_rdr2">
-            <div class="title">
-                <img alt="ico" class="ico" src="src\playstation.svg" loading="lazy"/>
-                <a class="name" href="#dualsense_in_rdr2">DualSense in RDR2</a>
-            </div>
-            <div class="inframe">
-                <p>
-                    1. Install <a href="https://store.steampowered.com/app/1812620/DSX/" target="_blank"><highlight>DSX</highlight></a> <br>
-                    2. Download the <a href="https://mega.nz/folder/xT9E0Cia#aBk6yQd8EpWNHZvxyHHo3Q" target="_blank"><highlight>archive</highlight></a> <br>
-                    3. Extract "002.zip" into your RDR2 directory <br>
-                    3. Open DSX and set the emulation to "Xbox360"
-                </p>
-            </div> 
-        </div>
-        <div class="frame" id="games_on_another_drive">
-            <div class="title">
-                <img alt="ico" class="ico" src="src\linux.svg" loading="lazy"/>
-                <a class="name" href="#games_on_another_drive">Games on another drive</a>
-            </div>
-            <div class="inframe">
-                <p>
-                    1. Create a directory <highlight>sudo mkdir /games</highlight> <br>
-                    2. Grant access to directory <highlight>sudo chmod -R 777 /games</highlight> <br>
-                    3. Add to /etc/fstab <highlight>UUID="foo" /games ext4 defaults 0 0</highlight> <br>
-                    4. Reboot your PC
-                </p>
-            </div>
-        </div>
-        <div class="frame" id="lock_cursor_in_xbox_games">
-            <div class="title">
-                <img alt="ico" class="ico" src="src\pointer.svg" loading="lazy"/>
-                <a class="name" href="#lock_cursor_in_xbox_games">Lock cursor in Xbox games</a>
-            </div>
-            <div class="inframe">
-                <p>
-                    1. Press Win + R <br>
-                    2. Enter <highlight>regedit</highlight> <br>
-                    3. Navigate to <highlight>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</highlight> <br>
-                    4. Set the "EnableLUA" entry to 1.
-                </p>
-            </div>
-        </div>
-        <div class="frame" id="tissot_install_custom_rom">
-            <div class="title">
-                <img alt="ico" class="ico" src="src\android.svg" loading="lazy"/>
-                <a class="name" href="#tissot_install_custom_rom">Tissot install custom ROM</a>
-            </div>
-            <div class="inframe">
-                <p>
-                    1. Download the ROM and <a href="https://mega.nz/folder/xH9U2YgD#LUwLml3pmrQIW_3IITCvdw" target="_blank"><highlight>these files</highlight></a> <br>
-                    2. Enable OEM Unlock and USB Debugging <br>
-                    3. Unzip "boot-recovery.img" to the ADB RUN bin folder <br>
-                    4. Open ADB RUB and enter <highlight>A</highlight> <br>
-                    5. Enter <highlight>adb reboot bootloader</highlight> <br>
-                    6. Enter <highlight>fastboot oem unlock</highlight> <br>
-                    7. After rebooting, repeat steps 2 and 5 <br>
-                    8. Enter <highlight>fastboot flash boot boot-recovery.img</highlight> <br>
-                    9. Enter <highlight>fastboot reboot</highlight> <br>
-                    10. Wipe dalvik, system, data <br>
-                    11. Copy the ROM and Magisk to the device <br>
-                    12. Install the ROM in the active slot and inject TWRP <br>
-                    13. Reboot to recovery and install Magisk <br>
-                    14. Reboot into the system
-                </p>
-            </div>
-        </div>
-        <div class="frame" id="vac_was_unable_to_verify_ur_game_session">
-            <div class="title">
-                <img alt="ico" class="ico" src="src\steam.svg" loading="lazy"/>
-                <a class="name" href="#vac_was_unable_to_verify_ur_game_session">VAC was unable to verify ur game session</a>
-            </div>
-            <div class="inframe">
-                <p>
-                    1. Verify the system date and time. <br>
-                    2. Close the steam <br>
-                    3. Navigate to the Steam folder <highlight>C:\Program Files (x86)\Steam</highlight> <br>
-                    4. Delete <highlight>Steam.dll</highlight> and <highlight>SteamUI.dll</highlight> <br>
-                    5. Press Win + R <br>
-                    6. Enter <highlight>C:\Program Files (x86)\Steam\bin\SteamService.exe /repair</highlight> <br>
-                    7. Open Steam <br>
-                    8. Open the steam download settings and clear the cache <br>
-                    9. Check the integrity of the Counter-Strike files <br>
-                </p>
-            </div>
-        </div>  
-        <div class="frame" id="xbox_app_stuck_on_syncing_data">
-            <div class="title">
-                <img alt="ico" class="ico" src="src\sync.svg" loading="lazy"/>
-                <a class="name" href="#xbox_app_stuck_on_syncing_data">Xbox app stuck on syncing data</a>
-            </div>
-            <div class="inframe">
-                <p>
-                    1. Open Task Manager <br>
-                    2. Locate <highlight>Gaming Services</highlight> <br>
-                    3. End this task <br>
-                    4. Restart the game
+                    Result: <code id="Result" name="calculator">0</code>
                 </p>
             </div>
         </div>
