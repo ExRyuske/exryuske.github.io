@@ -1,5 +1,9 @@
+:root {
+    color-scheme: light dark;
+}
+
 * {
-    color: #f9f9f9;
+    color: light-dark(#3c3836, #f8f8f2);
     font-family: Comfortaa;
     margin: auto;
     max-width: 644px;
@@ -7,7 +11,7 @@
 }
 
 body {
-    background-color: #000000;
+    background-color: light-dark(#ffffff, #282a36);
 }
 
 ::-webkit-scrollbar {
@@ -32,14 +36,14 @@ body {
 }
 
 button {
-    background-color: #212121;
+    background-color: light-dark(#f2e5bc, #44475a);
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
 }
 
 button:hover {
-    outline: 3px solid #FFA500;
+    outline: 3px solid light-dark(#3c3836, #bd93f9);
 }
 
 button:active {
@@ -51,13 +55,13 @@ button:active {
 }
 
 .frame {
+    border: 3px solid light-dark(#f2e5bc, #44475a);
     border-radius: 9px;
-    border: 3px solid #212121;
     margin: 9px 0 9px 0;
 }
 
 .title {
-    background-color: #212121;
+    background-color: light-dark(#f2e5bc, #44475a);
     display: flex;
     padding: 0 3px 3px 3px;
 }
@@ -78,12 +82,41 @@ button:active {
 }
 
 input {
-    background-color: #212121;
+    background-color: light-dark(#f2e5bc, #44475a);
     border-radius: 6px;
 }
 
 code {
-    color: #FFA500;
+    color: light-dark(#3c3836, #bd93f9);
     user-select: all;
     word-break: break-all;
+    -webkit-user-select: all;
+}
+
+@media (prefers-color-scheme: light) {
+    .logo {
+        filter: invert(18%) sepia(8%) saturate(482%) hue-rotate(336deg) brightness(94%) contrast(85%);
+    }
+
+    .link {
+        filter: invert(18%) sepia(8%) saturate(482%) hue-rotate(336deg) brightness(94%) contrast(85%);
+    }
+
+    .ico {
+        filter: invert(18%) sepia(8%) saturate(482%) hue-rotate(336deg) brightness(94%) contrast(85%);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .logo {
+        filter: invert(92%) sepia(7%) saturate(748%) hue-rotate(321deg) brightness(113%) contrast(95%);
+    }
+
+    .link {
+        filter: invert(92%) sepia(7%) saturate(748%) hue-rotate(321deg) brightness(113%) contrast(95%);
+    }
+
+    .ico {
+        filter: invert(92%) sepia(7%) saturate(748%) hue-rotate(321deg) brightness(113%) contrast(95%);
+    }
 }
