@@ -1,13 +1,3 @@
-function show_tools() {
-    document.getElementById('tools').style.display ='block';
-    document.getElementById('fix_issues').style.display ='none';
-}
-
-function show_fix_issues() {
-    document.getElementById('tools').style.display ='none';
-    document.getElementById('fix_issues').style.display ='block';
-}
-
 function calculate() {
     var size = document.getElementById("Size").value;
     var speed = document.getElementById("Speed").value * 8;

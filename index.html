@@ -10,141 +10,116 @@
     <link href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" rel="stylesheet"/>
 </head>
 <body>
-    <div class="me">
-        <img alt="logo" class="logo" src="src\logo.svg" loading="lazy"/>
-        <h1>ExRyuske</h1>
-        <a href="https://github.com/exryuske">
-            <img alt="GitHub" class="link" src="src\github.svg" loading="lazy"/>
+    <img alt="logo" class="logo" src="src\logo.svg" loading="lazy"/>
+    <h1>ExRyuske</h1>
+    <form>
+        <button type="submit" formaction="#download_speed_calculator">Tools</button>
+        <button type="submit" formaction="./dashboard.html">DashBoard</button>
+        <button type="submit" formaction="https://github.com/exryuske">GitHub</button>
+        <button type="submit" formaction="https://www.youtube.com/@exryuske">YouTube</button>
+    </form>
+    <div class="frame" id="dualsense_in_rdr2">
+        <a class="title" href="#dualsense_in_rdr2">
+            <img alt="ico" class="ico" src="src\playstation.svg" loading="lazy"/>
+            DualSense in RDR2
         </a>
-        <a href="https://www.youtube.com/@exryuske">
-            <img alt="YouTube" class="link" src="src\youtube.svg" loading="lazy"/>
+        <div class="content">
+            1. Install <a href="https://store.steampowered.com/app/1812620/DSX/" target="_blank"><code>DSX</code></a> <br>
+            2. Download the <a href="https://mega.nz/folder/xT9E0Cia#aBk6yQd8EpWNHZvxyHHo3Q" target="_blank"><code>archive</code></a> <br>
+            3. Extract "002.zip" into your RDR2 directory <br>
+            3. Open DSX and set the emulation to "Xbox360"
+        </div> 
+    </div>
+    <div class="frame" id="games_on_another_drive">
+        <a class="title" href="#games_on_another_drive">
+            <img alt="ico" class="ico" src="src\linux.svg" loading="lazy"/>
+            Games on another drive
         </a>
-    </div>
-    <div class="tabs">
-        <br>
-        <button onclick="show_fix_issues()" name="tabs">Fix Issues</button>
-        <button onclick="show_tools()" name="tabs">Tools</button>
-    </div>
-    <div id="fix_issues">
-        <div class="frame" id="dualsense_in_rdr2">
-            <div class="title">
-                <img alt="ico" class="ico" src="src\playstation.svg" loading="lazy"/>
-                <a class="name" href="#dualsense_in_rdr2">DualSense in RDR2</a>
-            </div>
-            <div class="inframe">
-                <p>
-                    1. Install <a href="https://store.steampowered.com/app/1812620/DSX/" target="_blank"><code>DSX</code></a> <br>
-                    2. Download the <a href="https://mega.nz/folder/xT9E0Cia#aBk6yQd8EpWNHZvxyHHo3Q" target="_blank"><code>archive</code></a> <br>
-                    3. Extract "002.zip" into your RDR2 directory <br>
-                    3. Open DSX and set the emulation to "Xbox360"
-                </p>
-            </div> 
-        </div>
-        <div class="frame" id="games_on_another_drive">
-            <div class="title">
-                <img alt="ico" class="ico" src="src\linux.svg" loading="lazy"/>
-                <a class="name" href="#games_on_another_drive">Games on another drive</a>
-            </div>
-            <div class="inframe">
-                <p>
-                    1. Create a directory <code>sudo mkdir /mnt/games</code> <br>
-                    2. Grant access to directory <code>sudo chmod -R 777 /mnt/games</code> <br>
-                    3. Add the disk to <code>/etc/fstab</code><br>
-                    4. Reboot your PC <br>
-                </p>
-            </div>
-        </div>
-        <div class="frame" id="lock_cursor_in_xbox_games">
-            <div class="title">
-                <img alt="ico" class="ico" src="src\pointer.svg" loading="lazy"/>
-                <a class="name" href="#lock_cursor_in_xbox_games">Lock cursor in Xbox games</a>
-            </div>
-            <div class="inframe">
-                <p>
-                    1. Press Win + R <br>
-                    2. Enter <code>regedit</code> <br>
-                    3. Navigate to <code>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</code> <br>
-                    4. Set the "EnableLUA" entry to 1.
-                </p>
-            </div>
-        </div>
-        <div class="frame" id="tissot_install_custom_rom">
-            <div class="title">
-                <img alt="ico" class="ico" src="src\android.svg" loading="lazy"/>
-                <a class="name" href="#tissot_install_custom_rom">Tissot install custom ROM</a>
-            </div>
-            <div class="inframe">
-                <p>
-                    1. Download the ROM and <a href="https://mega.nz/folder/xH9U2YgD#LUwLml3pmrQIW_3IITCvdw" target="_blank"><code>these files</code></a> <br>
-                    2. Enable OEM Unlock and USB Debugging <br>
-                    3. Unzip "boot-recovery.img" to the ADB RUN bin folder <br>
-                    4. Open ADB RUB and enter <code>A</code> <br>
-                    5. Enter <code>adb reboot bootloader</code> <br>
-                    6. Enter <code>fastboot oem unlock</code> <br>
-                    7. After rebooting, repeat steps 2 and 5 <br>
-                    8. Enter <code>fastboot flash boot boot-recovery.img</code> <br>
-                    9. Enter <code>fastboot reboot</code> <br>
-                    10. Wipe dalvik, system, data <br>
-                    11. Copy the ROM and Magisk to the device <br>
-                    12. Install the ROM in the active slot and inject TWRP <br>
-                    13. Reboot to recovery and install Magisk <br>
-                    14. Reboot into the system
-                </p>
-            </div>
-        </div>
-        <div class="frame" id="vac_was_unable_to_verify_your_game_session">
-            <div class="title">
-                <img alt="ico" class="ico" src="src\steam.svg" loading="lazy"/>
-                <a class="name" href="#vac_was_unable_to_verify_your_game_session">VAC was unable to verify your game session</a>
-            </div>
-            <div class="inframe">
-                <p>
-                    1. Verify the system date and time. <br>
-                    2. Close the steam <br>
-                    3. Navigate to the Steam folder <code>C:\Program Files (x86)\Steam</code> <br>
-                    4. Delete <code>Steam.dll</code> and <code>SteamUI.dll</code> <br>
-                    5. Press Win + R <br>
-                    6. Enter <code>C:\Program Files (x86)\Steam\bin\SteamService.exe /repair</code> <br>
-                    7. Open Steam <br>
-                    8. Open the steam download settings and clear the cache <br>
-                    9. Check the integrity of the Counter-Strike files <br>
-                </p>
-            </div>
-        </div>  
-        <div class="frame" id="xbox_app_stuck_on_syncing_data">
-            <div class="title">
-                <img alt="ico" class="ico" src="src\sync.svg" loading="lazy"/>
-                <a class="name" href="#xbox_app_stuck_on_syncing_data">Xbox app stuck on syncing data</a>
-            </div>
-            <div class="inframe">
-                <p>
-                    1. Open Task Manager <br>
-                    2. Locate <code>Gaming Services</code> <br>
-                    3. End this task <br>
-                    4. Restart the game
-                </p>
-            </div>
+        <div class="content">
+            1. Create a directory <code>sudo mkdir /mnt/games</code> <br>
+            2. Grant access to directory <code>sudo chmod -R 777 /mnt/games</code> <br>
+            3. Add the disk to <code>/etc/fstab</code><br>
+            4. Reboot your PC <br>
         </div>
     </div>
-    <div id="tools" class="hidden_by_default">
-        <div class="frame" id="#download_speed_calculator">
-            <div class="title">
-                <img alt="ico" class="ico" src="src/download.svg" loading="lazy"/>
-                <a class="name" href="#download_speed_calculator">Download speed calculator</a>
-            </div>
-            <div class="inframe">
-                <p>
-                    Size in GB <br>
-                    <input type="number" id="Size" name="calculator" /> <br>
-                    <br>
-                    Speed in MB/s <br>
-                    <input type="number" id="Speed" name="calculator" /> <br>
-                    <br>
-                    <button type="button" onclick="calculate()" name="calculator">Calculate</button> <br>
-                    <br>
-                    Result: <code id="Result" name="calculator">0</code>
-                </p>
-            </div>
+    <div class="frame" id="lock_cursor_in_xbox_games">
+        <a class="title" href="#lock_cursor_in_xbox_games">
+            <img alt="ico" class="ico" src="src\pointer.svg" loading="lazy"/>
+            Lock cursor in Xbox games
+        </a>
+        <div class="content">
+            1. Press Win + R <br>
+            2. Enter <code>regedit</code> <br>
+            3. Navigate to <code>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</code> <br>
+            4. Set the "EnableLUA" entry to 1.
+        </div>
+    </div>
+    <div class="frame" id="tissot_install_custom_rom">
+        <a class="title" href="#tissot_install_custom_rom">
+            <img alt="ico" class="ico" src="src\android.svg" loading="lazy"/>
+            Tissot install custom ROM
+        </a>
+        <div class="content">
+            1. Download the ROM and <a href="https://mega.nz/folder/xH9U2YgD#LUwLml3pmrQIW_3IITCvdw" target="_blank"><code>these files</code></a> <br>
+            2. Enable OEM Unlock and USB Debugging <br>
+            3. Unzip "boot-recovery.img" to the ADB RUN bin folder <br>
+            4. Open ADB RUB and enter <code>A</code> <br>
+            5. Enter <code>adb reboot bootloader</code> <br>
+            6. Enter <code>fastboot oem unlock</code> <br>
+            7. After rebooting, repeat steps 2 and 5 <br>
+            8. Enter <code>fastboot flash boot boot-recovery.img</code> <br>
+            9. Enter <code>fastboot reboot</code> <br>
+            10. Wipe dalvik, system, data <br>
+            11. Copy the ROM and Magisk to the device <br>
+            12. Install the ROM in the active slot and inject TWRP <br>
+            13. Reboot to recovery and install Magisk <br>
+            14. Reboot into the system
+        </div>
+    </div>
+    <div class="frame" id="vac_was_unable_to_verify_your_game_session">
+        <a class="title" href="#vac_was_unable_to_verify_your_game_session">
+            <img alt="ico" class="ico" src="src\steam.svg" loading="lazy"/>
+            VAC was unable to verify your game session
+        </a>
+        <div class="content">
+            1. Verify the system date and time. <br>
+            2. Close the steam <br>
+            3. Navigate to the Steam folder <code>C:\Program Files (x86)\Steam</code> <br>
+            4. Delete <code>Steam.dll</code> and <code>SteamUI.dll</code> <br>
+            5. Press Win + R <br>
+            6. Enter <code>C:\Program Files (x86)\Steam\bin\SteamService.exe /repair</code> <br>
+            7. Open Steam <br>
+            8. Open the steam download settings and clear the cache <br>
+            9. Check the integrity of the Counter-Strike files <br>
+        </div>
+    </div>  
+    <div class="frame" id="xbox_app_stuck_on_syncing_data">
+        <a class="title" href="#xbox_app_stuck_on_syncing_data">
+            <img alt="ico" class="ico" src="src\sync.svg" loading="lazy"/>
+            Xbox app stuck on syncing data
+        </a>
+        <div class="content">
+            1. Open Task Manager <br>
+            2. Locate <code>Gaming Services</code> <br>
+            3. End this task <br>
+            4. Restart the game
+        </div>
+    </div>
+    <div class="frame" id="download_speed_calculator">
+        <a class="title" href="#download_speed_calculator">
+            <img alt="ico" class="ico" src="src/download.svg" loading="lazy"/>
+            Download speed calculator
+        </a>
+        <div class="content">
+            Size in GB <br>
+            <input type="number" id="Size" name="calculator" /> <br>
+            <br>
+            Speed in MB/s <br>
+            <input type="number" id="Speed" name="calculator" /> <br>
+            <br>
+            <button type="button" onclick="calculate()" name="calculator">Calculate</button> <br>
+            <br>
+            Result: <code id="Result" name="calculator">0</code>
         </div>
     </div>
     <script src="main.js"></script>
