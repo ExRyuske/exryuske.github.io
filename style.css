@@ -47,16 +47,16 @@ button:active {
     margin: 6px 6px 6px 6px;
 }
 
-.ico {
-    height: 24px;
-    margin: 0 3px 0 0;
-    width: 24px;
-}
-
 .title {
     display: flex;
     font-size: 19.92px;
     padding: 0 3px 3px 3px;
+}
+
+.ico {
+    height: 24px;
+    margin: 0 3px 0 0;
+    width: 24px;
 }
 
 .content {

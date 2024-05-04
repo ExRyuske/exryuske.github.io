@@ -14,7 +14,7 @@
     <h1>ExRyuske</h1>
     <form>
         <button type="submit" formaction="#download_speed_calculator">Tools</button>
-        <button type="submit" formaction="./dashboard.html">DashBoard</button>
+        <!-- <button type="submit" formaction="./dashboard.html">DashBoard</button> -->
         <button type="submit" formaction="https://github.com/exryuske">GitHub</button>
         <button type="submit" formaction="https://www.youtube.com/@exryuske">YouTube</button>
     </form>
@@ -54,6 +54,17 @@
             4. Set the "EnableLUA" entry to 1.
         </div>
     </div>
+    <!--<div class="frame" id="optimize_windows_11_for_gaming">
+        <a class="title" href="#optimize_windows_11_for_gaming">
+            <img alt="ico" class="ico" src="src\windows.svg" loading="lazy"/>
+            Optimize Windows 11 for gaming
+        </a>
+        <div class="content">
+            1. Download and install <a href="" target="_blank"><code>Windows 11 Enterprise</code></a> <br>
+            2. Disable <a href="https://support.microsoft.com/en-us/windows/options-to-optimize-gaming-performance-in-windows-11-a255f612-2949-4373-a566-ff6f3f474613" target="_blank"><code>Memory integrity</code></a> <br>
+            3. Disable <a href="https://www.lifewire.com/turn-off-mouse-acceleration-in-windows-11-5193828" target="_blank"><code>Enhanced pointer precision</code></a>
+        </div>
+    </div>-->
     <div class="frame" id="tissot_install_custom_rom">
         <a class="title" href="#tissot_install_custom_rom">
             <img alt="ico" class="ico" src="src\android.svg" loading="lazy"/>
@@ -105,6 +116,7 @@
             4. Restart the game
         </div>
     </div>
+    <br>
     <div class="frame" id="download_speed_calculator">
         <a class="title" href="#download_speed_calculator">
             <img alt="ico" class="ico" src="src/download.svg" loading="lazy"/>
@@ -112,14 +124,31 @@
         </a>
         <div class="content">
             Size in GB <br>
-            <input type="number" id="Size" name="calculator" /> <br>
+            <input type="number" id="Size" /> <br>
             <br>
             Speed in MB/s <br>
-            <input type="number" id="Speed" name="calculator" /> <br>
+            <input type="number" id="Speed" /> <br>
             <br>
-            <button type="button" onclick="calculate()" name="calculator">Calculate</button> <br>
+            <button type="button" onclick="calculate()">Calculate</button> <br>
             <br>
-            Result: <code id="Result" name="calculator">0</code>
+            Result: <code id="ResultCalculator">0</code>
+        </div>
+    </div>
+    <div class="frame" id="random_number_generator">
+        <a class="title" href="#random_number_generator">
+            <img alt="ico" class="ico" src="src/shuffle.svg" loading="lazy"/>
+            Random number generator
+        </a>
+        <div class="content">
+            Min number <br>
+            <input type="number" id="Min" /> <br>
+            <br>
+            Max number <br>
+            <input type="number" id="Max" /> <br>
+            <br>
+            <button type="button" onclick="generate()">Generate</button> <br>
+            <br>
+            Result: <code id="ResultGenerator">0</code>
         </div>
     </div>
     <script src="main.js"></script>
