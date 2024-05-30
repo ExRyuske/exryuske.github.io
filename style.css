@@ -71,7 +71,7 @@ h1 {
 }
 
 .btn:hover {
-    outline: 0.2rem solid var(--outline-color);
+    outline: 0.2rem solid var(--fg-color);
 }
 
 .btn:active {
