@@ -1,0 +1,131 @@
+:root {
+    color-scheme: light dark;
+    --color-light-bg: #ffffff;
+    --color-light-fg: #3c3836;
+    --color-light-frame: #f2e5bc;
+    --color-dark-bg: #282a36;
+    --color-dark-fg: #f8f8f2;
+    --color-dark-frame: #44475a;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-color: var(--color-light-bg);
+        --fg-color: var(--color-light-fg);
+        --frame-color: var(--color-light-frame);
+    }
+
+    .logo, .link, .ico {
+        filter: invert(18%) sepia(8%) saturate(482%) hue-rotate(336deg) brightness(94%) contrast(85%);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: var(--color-dark-bg);
+        --fg-color: var(--color-dark-fg);
+        --frame-color: var(--color-dark-frame);
+    }
+
+    .logo, .link, .ico {
+        filter: invert(92%) sepia(7%) saturate(748%) hue-rotate(321deg) brightness(113%) contrast(95%);
+    }
+}
+
+* {
+    color: var(--fg-color);
+    font-family: Comfortaa;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    margin: auto;
+    max-width: 40rem;
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.logo {
+    height: 16rem;
+    width: 16rem;
+}
+
+h1 {
+    margin: -2rem 0 0.5rem 0;
+}
+
+.btn {
+    align-items: center;
+    background-color: var(--frame-color);
+    border-radius: 0.5rem;
+    display: grid;
+    font-size: medium;
+    margin: 0.1rem;
+    min-height: 2rem;
+    padding: 0.2rem 0.4rem;
+    width: min-content;
+}
+
+.btn:hover {
+    outline: 0.2rem solid var(--fg-color);
+}
+
+.btn:active {
+    outline: none;
+}
+
+.frame {
+    background-color: var(--frame-color);
+    border-radius: 0.5rem;
+    border: solid 0.2rem var(--frame-color);
+    margin: 0.5rem 0;
+    text-align: left;
+}
+
+.title {
+    display: flex;
+    font-size: x-large;
+    margin: 0.2rem;
+}
+
+.ico {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.separator {
+    margin: 0.5rem 0.2rem;
+}
+
+p {
+    margin: 0;
+}
+
+.content {
+    background-color: var(--bg-color);
+    border-radius: 0.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: medium;
+    padding: 0.2rem;
+}
+
+code {
+    -webkit-user-select: all;
+    background-color: var(--frame-color);
+    border-radius: 0.2rem;
+    font-size: small;
+    height: min-content;
+    padding: 0.1rem 0.2em;
+    user-select: all;
+    word-break: break-all;
+}
+
+input {
+    background-color: var(--frame-color);
+    border-radius: 0.5rem;
+}

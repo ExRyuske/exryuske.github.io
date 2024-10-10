@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta content="ExRyuske" name="description" />
+    <meta content="width=device-width" name="viewport" />
+    <title>ExRyuske</title>
+    <link rel="icon" href="src\logo.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap" />
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <img alt="logo" class="logo" src="src\logo.svg" loading="lazy" />
+    <h1>ExRyuske</h1>
+    <div class="frame" id="url">
+        <a class="title" href="#url">
+            <img alt="ico" class="ico" src="src\logo.svg" loading="lazy" />
+            <div class="separator"></div>
+            <p>URL</p>
+        </a>
+        <div class="content">
+            <a class="btn" href="#download_speed_calculator">Tools</a>
+            <a class="btn" href="https://github.com/exryuske">GitHub</a>
+            <a class="btn" href="https://github.com/exryuske">YouTube</a>
+        </div> 
+    </div>
+    <br>
+    <div class="frame" id="dualsense_in_rdr2">
+        <a class="title" href="#dualsense_in_rdr2">
+            <img alt="ico" class="ico" src="src\playstation.svg" loading="lazy" />
+            <div class="separator"></div>
+            <p>DualSense in RDR2</p>
+        </a>
+        <div class="content">
+            <div>
+                Install <a href="https://store.steampowered.com/app/1812620/DSX/" target="_blank"><code>DSX</code></a> <br>
+                Download the <a href="https://mega.nz/folder/xT9E0Cia#aBk6yQd8EpWNHZvxyHHo3Q" target="_blank"><code>archive</code></a> <br>
+                Extract "002.zip" into your RDR2 directory <br>
+                Open DSX and set the emulation to "Xbox360"
+            </div>
+        </div> 
+    </div>
+    <div class="frame" id="games_on_another_drive">
+        <a class="title" href="#games_on_another_drive">
+            <img alt="ico" class="ico" src="src\linux.svg" loading="lazy" />
+            <div class="separator"></div>
+            <p>Games on another drive</p>
+        </a>
+        <div class="content">
+            <div>
+                Create a directory <code>sudo mkdir /mnt/games</code> <br>
+                Grant access to directory <code>sudo chmod -R 777 /mnt/games</code> <br>
+                Add the disk to <code>/etc/fstab</code><br>
+                Reboot your PC <br>
+            </div>
+        </div>
+    </div>
+    <div class="frame" id="lock_cursor_in_xbox_games">
+        <a class="title" href="#lock_cursor_in_xbox_games">
+            <img alt="ico" class="ico" src="src\pointer.svg" loading="lazy" />
+            <div class="separator"></div>
+            <p>Lock cursor in Xbox games</p>
+        </a>
+        <div class="content">
+            <div>
+                Press Win + R <br>
+                Enter <code>regedit</code> <br>
+                Navigate to <code>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</code> <br>
+                Set the "EnableLUA" entry to 1.
+            </div>
+        </div>
+    </div>
+    <div class="frame" id="tissot_install_custom_rom">
+        <a class="title" href="#tissot_install_custom_rom">
+            <img alt="ico" class="ico" src="src\android.svg" loading="lazy" />
+            <div class="separator"></div>
+            <p>Tissot install custom ROM</p>
+        </a>
+        <div class="content">
+            <div>
+                Download the ROM and <a href="https://mega.nz/folder/xH9U2YgD#LUwLml3pmrQIW_3IITCvdw" target="_blank"><code>these files</code></a> <br>
+                Enable OEM Unlock and USB Debugging <br>
+                Unzip "boot-recovery.img" to the ADB RUN bin folder <br>
+                Open ADB RUB and enter <code>A</code> <br>
+                Enter <code>adb reboot bootloader</code> <br>
+                Enter <code>fastboot oem unlock</code> <br>
+                After rebooting, repeat steps 2 and 5 <br>
+                Enter <code>fastboot flash boot boot-recovery.img</code> <br>
+                Enter <code>fastboot reboot</code> <br>
+                Wipe dalvik, system, data <br>
+                Copy the ROM and Magisk to the device <br>
+                Install the ROM in the active slot and inject TWRP <br>
+                Reboot to recovery and install Magisk <br>
+                Reboot into the system
+            </div>
+        </div>
+    </div>
+    <div class="frame" id="vac_was_unable_to_verify_your_game_session">
+        <a class="title" href="#vac_was_unable_to_verify_your_game_session">
+            <img alt="ico" class="ico" src="src\steam.svg" loading="lazy" />
+            <div class="separator"></div>
+            <p>VAC was unable to verify your game session</p>
+        </a>
+        <div class="content">
+            <div>
+                Verify the system date and time. <br>
+                Close the steam <br>
+                Navigate to the Steam folder <code>C:\Program Files (x86)\Steam</code> <br>
+                Delete <code>Steam.dll</code> and <code>SteamUI.dll</code> <br>
+                Press Win + R <br>
+                Enter <code>C:\Program Files (x86)\Steam\bin\SteamService.exe /repair</code> <br>
+                Open Steam <br>
+                Open the steam download settings and clear the cache <br>
+                Check the integrity of the Counter-Strike files <br>
+            </div>
+        </div>
+    </div>  
+    <div class="frame" id="xbox_app_stuck_on_syncing_data">
+        <a class="title" href="#xbox_app_stuck_on_syncing_data">
+            <img alt="ico" class="ico" src="src\sync.svg" loading="lazy" />
+            <div class="separator"></div>
+            <p>Xbox app stuck on syncing data</p>
+        </a>
+        <div class="content">
+            <div>
+                Open Task Manager <br>
+                Locate <code>Gaming Services</code> <br>
+                End this task <br>
+                Restart the game
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="frame" id="download_speed_calculator">
+        <a class="title" href="#download_speed_calculator">
+            <img alt="ico" class="ico" src="src/download.svg" loading="lazy" />
+            <div class="separator"></div>
+            <p>Download speed calculator</p>
+        </a>
+        <div class="content">
+            <div>
+                <label for="Size">Size in GB</label> <br>
+                <input type="number" id="Size" /> <br>
+                <div class="separator"></div>
+                <label for="Speed">Speed in MB/s</label> <br>
+                <input type="number" id="Speed" /> <br>
+                <div class="separator"></div>
+                <button class="btn" type="button" onclick="calculate()">Calculate</button>
+                <div class="separator"></div>
+                Result: <code id="ResultCalculator">0</code>
+            </div>
+        </div>
+    </div>
+    <div class="frame" id="random_number_generator">
+        <a class="title" href="#random_number_generator">
+            <img alt="ico" class="ico" src="src/shuffle.svg" loading="lazy" />
+            <div class="separator"></div>
+            <p>Random number generator</p>
+        </a>
+        <div class="content">
+            <div>
+                <label for="Min">Min number</label> <br>
+                <input type="number" id="Min" /> <br>
+                <div class="separator"></div>
+                <label for="Max">Max number</label> <br>
+                <input type="number" id="Max" /> <br>
+                <div class="separator"></div>
+                <button class="btn" type="button" onclick="generate()">Generate</button>
+                <div class="separator"></div>
+                Result: <code id="ResultGenerator">0</code>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
